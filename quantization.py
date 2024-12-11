@@ -4,7 +4,7 @@ import glob
 from PIL import Image
 
 # Path to the folder with your JPEG images
-IMAGE_DIR = "path_to_your_images/"
+IMAGE_DIR = "representative_dataset" #Change to your dataset's path
 IMAGE_SIZE = (224, 224)  # Change to match your model's input size
 
 def representative_data_gen():
@@ -17,7 +17,7 @@ def representative_data_gen():
         yield [img.astype(np.float32)]
 
 # Load the TensorFlow model (e.g., SavedModel format)
-converter = tf.lite.TFLiteConverter.from_saved_model("path_to_your_saved_model")
+converter = tf.lite.TFLiteConverter.from_saved_model("saved_model_detection/saved_model") #Change to your model's path
 
 # Enable optimizations
 converter.optimizations = [tf.lite.Optimize.DEFAULT]
