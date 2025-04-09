@@ -1,3 +1,4 @@
-Representative_Dataset_Yoga_0.1_6342/
-calib_dataset_pixabay/
-Representative_Dataset_Yoga_0.1_26/
+representative_datasets/
+quantized_models/face/*/
+quantized_models/pose/*/
+quantized_models/hand/*/
